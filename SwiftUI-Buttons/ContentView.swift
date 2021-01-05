@@ -11,27 +11,22 @@ struct ContentView: View {
     var body: some View {
         Button (action: {
             // What to perform
-            
+            print("Delete button tapped!")
         }, label: {
             // What the button looks like
-            Text("Hello World")
-                .padding()
-                .background(Color.purple)
-                .foregroundColor(.white)
-                .clipShape(Capsule())
-                .padding(5)
-                .overlay(
-                    Capsule()
-                        .stroke(Color.purple, lineWidth: 2)
-                )
+            Label (
+                title: {  Text("Delete")
+                    .fontWeight(.semibold)
+                    .font(.title) },
+                icon: { Image(systemName: "trash")
+                    .font(.largeTitle) }
+            )
+            .padding()
+            .foregroundColor(.white)
+            .background(Color.red)
+            .clipShape(Capsule())
             
-//                .padding()
-//                .foregroundColor(.white)
-//                .font(.title)
-//                .background(Color.purple)
-//                .padding(5)
-//                .border(Color.purple, width: 2)
-
+            
                 
         })
 
